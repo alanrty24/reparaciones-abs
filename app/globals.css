@@ -1,26 +1,93 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colores principales centralizados */
+  --background: #090909;
+  --foreground: #f4f4f5;
+  --primary: #e11d48; /* rojo principal */
+  --primary-hover: #be123c;
+  --secondary: #25d366; /* WhatsApp */
+  --secondary-hover: #1ebe57;
+  --accent: #fbbf24; /* amarillo/acento opcional */
+  --surface: #18181b; /* fondo tarjetas */
+  --border: #27272a;
+  --muted: #a1a1aa;
+  --white: #fff;
+  --black: #000;
+  --navbar-bg: #18181b;
+  --navbar-border: #27272a;
+  --hero-bg: #120d0d;
+  --hero-overlay: rgba(8,8,8,0.92);
+  --button-bg: var(--primary);
+  --button-hover: var(--primary-hover);
+  --whatsapp-bg: var(--secondary);
+  --whatsapp-hover: var(--secondary-hover);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+@layer utilities {
+  .bg-main {
+    background-color: var(--background);
+  }
+  .bg-hero {
+    background-color: var(--hero-bg);
+  }
+  .bg-surface {
+    background-color: var(--surface);
+  }
+  .text-main {
+    color: var(--foreground);
+  }
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  
+  .text-muted {
+    color: var(--muted);
+  }
+  .border-main {
+    border-color: var(--border);
+  }
+  .bg-whatsapp {
+    background-color: var(--whatsapp-bg);
+  }
+  .hover\:bg-whatsapp-hover:hover {
+    background-color: var(--whatsapp-hover);
+  }
+  .bg-navbar {
+    background-color: var(--navbar-bg);
+  }
+  .border-navbar {
+    border-color: var(--navbar-border);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --surface: #18181b;
+    --border: #27272a;
+    --navbar-bg: #18181b;
+    --navbar-border: #27272a;
+    --hero-bg: #120d0d;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-bebas-neue), Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
