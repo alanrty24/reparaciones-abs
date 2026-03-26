@@ -1,0 +1,17 @@
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 6));
+  }
+}
+
+.animate-scroll-x {
+  display: flex;
+  width: calc(250px * 12);
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  animation: scroll-x 20s linear infinite;
+}

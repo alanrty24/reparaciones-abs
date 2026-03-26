@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Button from "@/components/button";
 import SectionTitle from "@/components/SectionTitle";
-import FloatingWhatsappButton from "@/components/FloatingWhatsappButton";
-import { whatsappData } from "@/lib/data";
 import { bebasNeue } from "@/app/fonts";
 import { FaMessage } from "react-icons/fa6";
+import { LuBookOpen } from "react-icons/lu";
 
 export default function Hero() {
   return (
@@ -54,9 +53,11 @@ export default function Hero() {
 
               <Button
                 href="#catalogo"
-                className="min-w-48 border border-white/20 bg-transparent px-6 py-3 text-sm text-main hover:bg-white hover:text-black"
+                className="flex items-center gap-2 min-w-48 border border-white/20 bg-transparent px-6 py-3 text-sm text-main hover:bg-white hover:text-black"
               >
-                <span aria-hidden="true">◫</span>
+                <span aria-hidden="true">
+                  <LuBookOpen className="w-4 h-4"/>
+                </span>
                 VER CATALOGO
               </Button>
             </div>
@@ -75,12 +76,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-
-        <FloatingWhatsappButton
-          phone={whatsappData.phone}
-          message={whatsappData.message}
-          label={whatsappData.label}
-        />
       </div>
     </section>
   );
