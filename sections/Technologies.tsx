@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { technologies } from "@/lib/data";
 import TechnologyCard from "@/components/TechnologyCard";
@@ -13,8 +14,9 @@ const iconMap: Record<string, IconType> = {
 };
 
 export default function Technologies() {
+
   return (
-    <section id="technologies" className="py-16 bg-black">
+    <section id="tecnologia" className="py-16 bg-[#131313]">
       <div className="max-w-6xl mx-auto px-4">
         <div className="relative flex flex-col md:flex-row md:items-center md:justify-between mb-10 gap-6">
           <div>
@@ -26,7 +28,7 @@ export default function Technologies() {
             </p>
           </div>
           <span
-          className="absolute bottom-0 right-0 w-1/2 border-b-2 border-white/10 transform -translate-y-1/2 pointer-events-none"
+            className="hidden md:block absolute bottom-0 right-0 w-1/2 border-b-2 border-white/10 transform -translate-y-1/2 pointer-events-none"
           />
           <div className="flex flex-col items-end md:items-center min-w-28">
             <span className={`${spaceGrotesk.className} text-4xl md:text-5xl font-bold text-red-600 leading-none`}>03</span>
@@ -39,9 +41,13 @@ export default function Technologies() {
             return (
               <TechnologyCard
                 key={tech.name}
+                nroItem={tech.id}
                 name={tech.name}
                 description={tech.description}
                 Icon={Icon}
+                onDetailClick={() => {
+                  // Aquí puedes manejar la lógica para mostrar el detalle de la tecnología
+                }}
               />
             );
           })}
@@ -49,4 +55,5 @@ export default function Technologies() {
       </div>
     </section>
   );
-}
+} 
+      

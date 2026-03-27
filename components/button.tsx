@@ -12,7 +12,7 @@ export default function Button({ href, children, className = "", onClick }: Butt
     <Link
       href={href}
       onClick={onClick}
-      className={`inline-flex items-center justify-center rounded-sm bg-red-600 px-5 py-2 text-xs font-extrabold tracking-wider text-white transition hover:bg-red-500 ${className}`}
+      className={`inline-flex items-center justify-center rounded-sm bg-red-600 px-5 py-2 text-xs font-extrabold tracking-wider text-white transition  ${className}`}
     >
       {children}
     </Link>

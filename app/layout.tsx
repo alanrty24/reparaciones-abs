@@ -5,6 +5,7 @@ import { montserrat } from "./fonts";
 import { ReactNode } from "react";
 import FloatingWhatsappButton from "@/components/FloatingWhatsappButton";
 import { whatsappData } from "@/lib/data";
+import Footer from "@/sections/Footer";
 
 export const metadata: Metadata = {
   title: "Reparaciones ABS",
@@ -37,6 +38,7 @@ export default function RootLayout({
           label={whatsappData.label}
         />
         {children}
+        <Footer />
       </body>
     </html>
   );

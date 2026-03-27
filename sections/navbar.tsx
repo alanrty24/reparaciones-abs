@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Button from "../components/button";
 import { navItems } from "../lib/data";
+import { spaceGrotesk } from "@/app/fonts";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,10 +55,10 @@ export default function Navbar() {
               <li key={item.href} className="relative">
                 <Link
                   href={item.href}
-                  className={`text-xs font-extrabold tracking-wide transition ${
+                  className={`text-xs font-extrabold tracking-wide transition ${spaceGrotesk.className} ${
                     index === 0
                       ? "text-primary"
-                      : "text-main hover:text-white"
+                      : "text-main hover:text-red-600"
                   }`}
                 >
                   {item.label}
@@ -85,7 +86,7 @@ export default function Navbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`block rounded px-2 py-2 text-xs font-extrabold tracking-wide ${
+                  className={`block rounded px-2 py-2 text-xs font-extrabold tracking-wide ${spaceGrotesk.className} ${
                     index === 0
                       ? "bg-primary/10 text-primary"
                       : "text-main hover:bg-surface"

@@ -43,7 +43,7 @@ export default function Hero() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button
                 href="#contacto"
-                className="flex items-center min-w-48 gap-2 px-6 py-3 text-sm"
+                className="flex items-center min-w-48 gap-2 px-6 py-4 text-sm hover:bg-red-500"
               >
                 <span aria-hidden="true">
                     <FaMessage className="w-4 h-4"/>
@@ -53,7 +53,7 @@ export default function Hero() {
 
               <Button
                 href="#catalogo"
-                className="flex items-center gap-2 min-w-48 border border-white/20 bg-transparent px-6 py-3 text-sm text-main hover:bg-white hover:text-black"
+                className="flex items-center gap-2 min-w-48 border border-red-200 bg-transparent px-6 py-4 text-sm text-main hover:bg-[#191A1F]"
               >
                 <span aria-hidden="true">
                   <LuBookOpen className="w-4 h-4"/>
