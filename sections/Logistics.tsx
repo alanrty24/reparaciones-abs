@@ -12,7 +12,7 @@ export default function Logistics() {
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-4 px-4 items-center justify-between">
         {/* Columna izquierda */}
         <div className="flex-1 w-full max-w-xl">
-          <h2 className={`text-4xl font-extrabold text-main mb-2 leading-tight ${spaceGrotesk.className}`}>
+          <h2 className={`text-3xl md:text-4xl font-extrabold text-main mb-2 leading-tight ${spaceGrotesk.className}`}>
             {logisticsData.title}
           </h2>
           <p className="text-muted text-lg mb-8">

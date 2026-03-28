@@ -18,8 +18,8 @@ export default function BrandsCarousel() {
   };
 
   return (
-    <section className="relative z-0 bg-black py-8 w-full overflow-hidden">
-      <div className="relative z-0 flex items-center justify-center gap-8 max-w-6xl mx-auto">
+    <section className="relative bg-black py-8 w-full overflow-hidden">
+      <div className="relative flex items-center justify-center gap-8 max-w-6xl mx-auto">
         <div className="flex-1">
           <h3 className="w-full text-center text-xs tracking-widest text-gray-300 mb-8 uppercase">
             Certificados para marcas elite

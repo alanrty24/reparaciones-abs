@@ -40,7 +40,7 @@ export default function Footer() {
             Av. Principal, Edif. Tech Center<br />Caracas, Venezuela
           </address>
           <div className="flex gap-4 mt-2">
-            <a href="mailto:info@reparacionesabs.com" className="text-primary hover:text-white text-xl" aria-label="Enviar correo">
+            <a href="mailto:reparacionesabsve@gmail.com" className="text-primary hover:text-white text-xl" aria-label="Enviar correo">
               <FaEnvelope />
             </a>
             <a href="tel:+584241727312" className="text-primary hover:text-white text-xl" aria-label="Llamar">

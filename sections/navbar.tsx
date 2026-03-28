@@ -11,7 +11,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-navbar bg-navbar/95 backdrop-blur">
+    <header className="fixed w-full top-0 z-50 border-b border-navbar bg-navbar/95 backdrop-blur">
       {/* Menu de Mobile */}
       <nav
         className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"

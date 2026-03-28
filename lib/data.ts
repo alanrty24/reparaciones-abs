@@ -137,3 +137,47 @@ export const whatsappData = {
   message: "Hola, quiero más información sobre reparación de módulos ABS.",
   label: "Chat con un especialista",
 };
+
+export type DiagnosticFeature = {
+  id: string;
+  icon: "hardware" | "shield" | "priority";
+  title: string;
+  description: string;
+};
+
+export const diagnosticSectionData = {
+  id: "contacto",
+  eyebrow: "AGENDE SU TURNO",
+  titleLine1: "SOLICITA TU",
+  titleLine2: "DIAGNÓSTICO",
+  description:
+    "Inicie el proceso de restauración con un escaneo computarizado de grado industrial. Protocolos de seguridad certificados.",
+  submitLabel: "ENVIAR REQUERIMIENTO TECH",
+  secureLabel: "SECURE TECH PROTOCOL 256-BIT ENCRYPTED",
+  successMessage:
+    "Solicitud enviada correctamente. Nuestro equipo te contactará en menos de 2 horas.",
+};
+
+export const diagnosticFeatures: DiagnosticFeature[] = [
+  {
+    id: "hardware",
+    icon: "hardware",
+    title: "HARDWARE OEM",
+    description:
+      "Uso exclusivo de componentes originales y software de diagnóstico propietario.",
+  },
+  {
+    id: "shield",
+    icon: "shield",
+    title: "BLINDAJE DE DATOS",
+    description:
+      "Su información técnica y personal está protegida bajo protocolos de encriptación.",
+  },
+  {
+    id: "priority",
+    icon: "priority",
+    title: "RESPUESTA PRIORITY",
+    description:
+      "Atención técnica especializada en menos de 12 horas hábiles.",
+  },
+];
