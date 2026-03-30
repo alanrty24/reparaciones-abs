@@ -4,8 +4,12 @@ import SectionTitle from "@/components/SectionTitle";
 import { bebasNeue } from "@/app/fonts";
 import { FaMessage } from "react-icons/fa6";
 import { LuBookOpen } from "react-icons/lu";
+import { whatsappData } from "@/lib/data";
+import Link from "next/link";
 
 export default function Hero() {
+  const url = `https://wa.me/${whatsappData.phone.replace(/[^\d]/g, "")}?text=${encodeURIComponent(whatsappData.message)}`;
+
   return (
     <section
       id="hero"
@@ -26,37 +30,39 @@ export default function Hero() {
       <div className="relative mx-auto flex min-h-[calc(100svh-73px)] w-full max-w-6xl items-center px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid w-full items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(420px,0.95fr)] lg:gap-12">
           <div className="max-w-2xl">
-            <SectionTitle className="mb-6">INGENIERÍA DE PRECISIÓN</SectionTitle>
+            <SectionTitle className="mb-6">SERVICIOS DE PRECISIÓN</SectionTitle>
 
-            <h1 
-            className={`max-w-[12ch] ${bebasNeue.className} text-5xl leading-[0.9] font-bold tracking-tight text-main sm:text-6xl md:text-7xl xl:text-[6.75rem]`}>
-              Presión y <span className="text-primary">precisión</span> en tu
-              seguridad
+            <h1
+              className={`max-w-[12ch] ${bebasNeue.className} text-5xl leading-[0.9] font-bold tracking-tight text-main sm:text-6xl md:text-7xl xl:text-[6.75rem]`}
+            >
+              reparación hidraúlica de{" "}
+              <span className="text-primary">módulos</span> ABS
             </h1>
 
             <p className="mt-6 max-w-xl text-sm leading-7 text-muted sm:text-base">
               Especialistas certificados en la restauración de sistemas de
-              frenado inteligente. Recuperamos la integridad de su módulo ABS
-              con tecnología de diagnóstico aeroespacial.
+              frenado inteligente. Recupere su módulo de freno abs original y
+              ahorre mas del 80% del valor de un módulo de agencia.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Button
-                href="#contacto"
-                className="flex items-center min-w-48 gap-2 px-6 py-4 text-sm hover:bg-red-500"
+              <Link
+                href={url}
+                target="_blank"
+                className="flex items-center min-w-48 gap-2 px-6 py-4 text-sm bg-red-700 hover:bg-red-500"
               >
                 <span aria-hidden="true">
-                    <FaMessage className="w-4 h-4"/>
+                  <FaMessage className="w-4 h-4" />
                 </span>
                 WHATSAPP SPECIALIST
-              </Button>
+              </Link>
 
               <Button
                 href="#catalogo"
                 className="flex items-center gap-2 min-w-48 border border-red-200 bg-transparent px-6 py-4 text-sm text-main hover:bg-[#191A1F]"
               >
                 <span aria-hidden="true">
-                  <LuBookOpen className="w-4 h-4"/>
+                  <LuBookOpen className="w-4 h-4" />
                 </span>
                 VER CATALOGO
               </Button>

@@ -52,7 +52,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-8 lg:flex">
           <ul className="flex items-center gap-7">
             {navItems.map((item, index) => (
-              <li key={item.href} className="relative">
+              <li key={item.label} className="relative">
                 <Link
                   href={item.href}
                   className={`text-xs font-extrabold tracking-wide transition ${spaceGrotesk.className} ${

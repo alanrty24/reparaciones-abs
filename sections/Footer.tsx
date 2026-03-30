@@ -1,6 +1,7 @@
 import React from "react";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { footerServices, footerCompany } from "@/lib/data";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
         <div>
           <h3 className="text-2xl font-extrabold mb-3 text-main">REPARACIONES ABS</h3>
           <p className="text-muted max-w-xs">
-            Líderes en ingeniería de frenado de alta precisión en Venezuela. Tecnología alemana al servicio de su seguridad.
+            Líderes en sistemas de frenado de alta precisión en Venezuela. Reparación experta de módulos ABS y garantía de calidad.
           </p>
         </div>
         {/* Servicios */}
@@ -27,8 +28,8 @@ export default function Footer() {
           <h4 className="font-bold uppercase text-sm mb-3 tracking-widest text-main">Compañía</h4>
           <ul className="space-y-2">
             {footerCompany.map((c) => (
-              <li key={c.label}>
-                <a href={c.href} className="text-muted hover:text-primary transition-colors cursor-pointer">{c.label}</a>
+              <li key={c.id}>
+                <Link href={c.href} className="text-muted hover:text-primary transition-colors cursor-pointer">{c.label}</Link>
               </li>
             ))}
           </ul>
@@ -37,15 +38,15 @@ export default function Footer() {
         <div>
           <h4 className="font-bold uppercase text-sm mb-3 tracking-widest text-main">Contacto</h4>
           <address className="not-italic text-muted mb-4">
-            Av. Principal, Edif. Tech Center<br />Caracas, Venezuela
+           Caracas, Venezuela
           </address>
           <div className="flex gap-4 mt-2">
-            <a href="mailto:reparacionesabsve@gmail.com" className="text-primary hover:text-white text-xl" aria-label="Enviar correo">
+            <Link href="mailto:reparacionesabsve@gmail.com" className="text-primary hover:text-white text-xl" aria-label="Enviar correo">
               <FaEnvelope />
-            </a>
-            <a href="tel:+584241727312" className="text-primary hover:text-white text-xl" aria-label="Llamar">
+            </Link>
+            <Link href="tel:+584241727312" className="text-primary hover:text-white text-xl" aria-label="Llamar">
               <FaPhoneAlt />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

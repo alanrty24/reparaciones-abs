@@ -16,15 +16,16 @@ const iconMap: Record<string, IconType> = {
 export default function Technologies() {
 
   return (
-    <section id="tecnologia" className="py-16 bg-[#131313]">
+    <section id="señales" className="py-16 bg-[#131313]">
       <div className="max-w-6xl mx-auto px-4">
         <div className="relative flex flex-col md:flex-row md:items-center md:justify-between mb-10 gap-6">
           <div>
             <h2 className={`${spaceGrotesk.className} text-3xl md:text-4xl font-bold uppercase text-white mb-2`}>
-              Ingeniería <span className="text-red-500">Aplicada</span>
+              Señales de <span className="text-red-500">Alerta</span>
             </h2>
-            <p className="text-gray-300 max-w-2xl">
-              Utilizamos equipos y herramientas de última generación para garantizar diagnósticos precisos y reparaciones seguras en módulos ABS y sistemas electrónicos automotrices.
+            <p className="text-gray-300 max-w-xl">
+              la falla puede ser presentada sin <span className="text-red-500">MOSTRAR SEÑALES</span>
+               por el testigo abs en el tablero del auto.
             </p>
           </div>
           <span
